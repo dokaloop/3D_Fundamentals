@@ -22,6 +22,7 @@
 #include <string>
 
 class ChiliException
+	// use to propagate error
 {
 public:
 	ChiliException( const wchar_t* file,unsigned int line,const std::wstring& note = L"" )

@@ -118,8 +118,8 @@ public:
 	{
 		return pBuffer.get();
 	}
-	static Surface FromFile( const std::wstring& name );
-	void Save( const std::wstring& filename ) const;
+	static Surface FromFile( const std::wstring& name ); //ø…“‘load png,jpg etc.
+	void Save( const std::wstring& filename ) const; //save to bitmap
 	void Copy( const Surface& src );
 private:
 	// calculate pixel pitch required for given byte aligment (must be multiple of 4 bytes)

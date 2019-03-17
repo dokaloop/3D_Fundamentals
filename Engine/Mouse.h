@@ -71,11 +71,11 @@ public:
 		{
 			return type;
 		}
-		Vei2 GetPos() const
+		Vei2 GetPos() const //知道当前鼠标在的位置
 		{
 			return { x,y };
 		}
-		int GetPosX() const
+		int GetPosX() const 
 		{
 			return x;
 		}
@@ -97,7 +97,7 @@ public:
 	Mouse( const Mouse& ) = delete;
 	Mouse& operator=( const Mouse& ) = delete;
 	Vei2 GetPos() const;
-	int GetPosX() const;
+	int GetPosX() const; 
 	int GetPosY() const;
 	bool LeftIsPressed() const;
 	bool RightIsPressed() const;

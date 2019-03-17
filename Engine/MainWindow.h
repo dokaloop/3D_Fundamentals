@@ -54,16 +54,17 @@ public:
 	MainWindow( const MainWindow& ) = delete;
 	MainWindow& operator=( const MainWindow& ) = delete;
 	~MainWindow();
-	bool IsActive() const;
-	bool IsMinimized() const;
+	bool IsActive() const; //check if it is active
+	bool IsMinimized() const; //check if it is minimized
 	void ShowMessageBox( const std::wstring& title,const std::wstring& message ) const;
-	void Kill()
+	void Kill() // kill the window == program end
 	{
 		PostQuitMessage( 0 );
 	}
 	// returns false if quitting
 	bool ProcessMessage();
-	const std::wstring& GetArgs() const
+	const std::wstring& GetArgs() const 
+	//you can get the argument that was pass to the window when it was run
 	{
 		return args;
 	}

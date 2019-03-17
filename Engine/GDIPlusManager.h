@@ -22,6 +22,7 @@
 #include "ChiliWin.h"
 
 class GDIPlusManager
+	//Surface class 里面的load png等功能会用到它
 {
 public:
 	GDIPlusManager();

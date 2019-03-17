@@ -30,7 +30,7 @@ int WINAPI wWinMain( HINSTANCE hInst,HINSTANCE,LPWSTR pArgs,INT )
 		try
 		{
 			Game theGame( wnd );
-			while( wnd.ProcessMessage() )
+			while( wnd.ProcessMessage() ) //check if the programming is ending, if it return false, you quit
 			{
 				theGame.Go();
 			}

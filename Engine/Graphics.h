@@ -54,8 +54,10 @@ public:
 	Graphics( class HWNDKey& key );
 	Graphics( const Graphics& ) = delete;
 	Graphics& operator=( const Graphics& ) = delete;
-	void EndFrame();
+	void EndFrame(); //把value从CPU弄到屏幕上
 	void BeginFrame();
+	//clears out system memory buffer
+	//reset the buffer, so we can do out PutPixel in a clean slate.
 	void DrawLine( const Vec2& p1,const Vec2& p2,Color c )
 	{
 		DrawLine( p1.x,p1.y,p2.x,p2.y,c );
@@ -85,6 +87,7 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11SamplerState>			pSamplerState;
 	D3D11_MAPPED_SUBRESOURCE							mappedSysBufferTexture;
 	Surface												sysBuffer;
+	//Surface是一个class represent system memory buffer，你可以用PutPixel在上面写value
 public:
 	static constexpr unsigned int ScreenWidth = 800u;
 	static constexpr unsigned int ScreenHeight = 600u;
